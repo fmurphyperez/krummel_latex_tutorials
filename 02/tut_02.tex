@@ -1,0 +1,70 @@
+\documentclass{article}
+%\usepackage{unicode-math}
+%\newcommand\Alpha{\mathrm{A}}
+\newcommand{\Alpha}{\mathrm{A}}
+\begin{document}
+Superscripts:
+\[x^1\] % lazy mode!
+\[x^12\] % lazy mode with more than one digit will be wrong!
+\[x^{12}\] % use curly braces!
+%\[x^1^2\] % Nested subscripts won't work in lazy mode
+\[x^{1^2}\] % This will work, which is the same as...
+\[x^{1^{2}}\] %
+\[x^{1^{2^{3}}}\] % now trying more than two
+
+Subscripts:
+\[x_1\] % lazy mode!
+\[x_12\] % lazy mode with more than one digit will be wrong!
+\[x_{12}\] % use curly braces!
+%\[x_1_2\] % Nested subscripts won't work in lazy mode
+\[x_{1_2}\] % This will work, which is the same as...
+\[x_{1_{2}}\] %
+\[x_{1_{2_{3}}}\] % now trying more than two 
+
+% Conclusión, no sea floj@. 
+
+Greek letters:
+\[\pi\]
+\[\Pi\]
+\[\alpha\] % easy-peasy
+\[\Alpha\] % not so easy-peasy 
+% If xelatex, do \usepackage{unicode-math} in the preamble!
+% If pdflatex, do \newcommand{\Alpha}{\mathrm{A}}
+%\[A=\pir^{2}\] % This won't work.
+\[A=\pi r^{2}\] % This will work.
+\[A=\pi{}r^{2}\] % This will also work.
+
+% Conclusión, use la versión que más le guste.
+Trig functions:
+\[y=sin{}x\] % This is wrong.
+\[y=\sin{x}\] % This is how it should be.
+\[y=\cos{x}\]
+\[y=\cos{\theta}\] % Makes sense, why we use braces.
+% Nueva conclusión, no use la versión que más le guste, use {}.
+\[y=\sin^{-1}{\theta}\]
+\[y=\arcsin{\theta}\] % Also works like this.
+
+Log functions:
+\[y=logx\] % Wrong!
+\[y=\log{x}\]
+\[y=\log_{12}{x}\]
+\[y=\ln{x}\]
+
+Roots:
+\[\sqrt{3}\]
+\[\sqrt[3]{2}\] % easy-peasy
+% Turn off the page numbers? \pagestyle{empty}
+\[\sqrt{x^2+y^2}\]
+\[\sqrt{3\sqrt{2}}\]
+
+Fractions:
+\[\frac{2}{3}\]
+% In a line
+About \(\frac{2}{3}\) of the glass is full, I guess.\\
+%
+About \(\frac{2}{3}\) of the glass is full, I guess.\\ [2pt] % ugly!
+%
+About dos terceras partes of the glass is full, I guess. % Do you really need a fraction in a text line?
+
+
+\end{document}
