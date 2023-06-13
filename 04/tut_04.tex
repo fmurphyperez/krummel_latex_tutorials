@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{enumerate}
+\begin{document}
+\section{Lists}
+	%not a list.
+	%apple
+	%orange
+	%banana
+	%grapes
+	%watermelon
+	\begin{enumerate}[A.]% need \usepackage{enumerate}
+		\item apple % don't have to use \\
+		\item orange % note the spacing
+		\begin{enumerate}
+			\item red
+			\begin{enumerate}[i)]
+				\item ichi
+				\item ni
+				\item san % the 
+			\end{enumerate}
+			\item blue
+		\end{enumerate}\setcounter{enumi}{5}
+		\item banana
+	\end{enumerate}
+	\begin{itemize}
+	\item apple % don't have to use \\
+	\item orange % note the spacing
+	\item banana
+\end{itemize}
+	\begin{itemize}
+	\item[one] apple % don't have to use \\
+	\item[two] orange % note the spacing
+	\item[three] banana
+\end{itemize}
+\end{document}
